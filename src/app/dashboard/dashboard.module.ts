@@ -7,6 +7,7 @@ import{TablesModule}from 'src/app/tables/tables.module'
 import { CardboardModule } from "../cardboard/cardboard.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ChartDashboardModule } from "../chart-dashboard/chart-dashboard.module";
+import { CharModule } from "../char/char.module";
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -16,8 +17,9 @@ import { ChartDashboardModule } from "../chart-dashboard/chart-dashboard.module"
     TablesModule,
     CardboardModule,
     ChartDashboardModule,
+    CharModule,
     FlexLayoutModule
   ],
-  exports:[CardboardModule,ChartDashboardModule]
+  exports:[CardboardModule,ChartDashboardModule,CharModule]
 })
 export class DashboardModule { }
