@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { CharRoutingModule } from './char-routing.module';
 import { CharComponent } from './char.component';
-
+import { MatButtonModule } from "@angular/material/button";
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [CharComponent],
   imports: [
     CommonModule,
-    CharRoutingModule
+    CharRoutingModule,
+    MatButtonModule,
+    ChartsModule
+
   ],
   exports: [CharComponent]
 })
