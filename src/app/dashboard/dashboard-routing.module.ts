@@ -5,7 +5,17 @@ import { DashboardComponent } from "./dashboard.component";
 const routes: Routes = [
   {
     path:'',
-    component:DashboardComponent
+    component:DashboardComponent,
+    children:[
+      {
+        path:'',
+        redirectTo:'cardboard'
+      },
+      {
+        path:'cardboard',
+        loadChildren:()=>import("./cardboard/cardboard.module").then(m=>m.CardboardModule)
+      }
+    ]
   }
 ];
 
