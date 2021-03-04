@@ -5,17 +5,7 @@ import { DashboardComponent } from "./dashboard.component";
 const routes: Routes = [
   {
     path:'',
-    component:DashboardComponent,
-    children:[
-      {
-        path:'',
-        redirectTo:'cardboard'
-      },
-      {
-        path:'cardboard',
-        loadChildren:()=>import("./cardboard/cardboard.module").then(m=>m.CardboardModule)
-      }
-    ]
+    component:DashboardComponent
   }
 ];
 
@@ -23,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule{}

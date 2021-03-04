@@ -20,6 +20,8 @@ const MATERIAL_MODULES=[
     CardboardRoutingModule,
     ...MATERIAL_MODULES,
      FlexLayoutModule
-  ]
+  ],
+
+  exports: [CardboardComponent]
 })
 export class CardboardModule { }
